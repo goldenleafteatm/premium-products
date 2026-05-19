@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden Leaf</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Premium Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background-logo"></div>
+
+<div class="container">
+
+    <h1>Golden Leaf</h1>
+    <p class="tagline">Taste Of Nature</p>
+
+    <form
+      action="https://formspree.io/f/xgoqvgze"
+      method="POST"
+      class="order-form"
+    >
+
+      <!-- Name -->
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <!-- Phone -->
+      <div class="input-group">
+        <label>Mobile Number</label>
+        <input type="tel" name="phone" required>
+      </div>
+
+      <!-- Product Slider -->
+      <div class="product-section">
+
+        <label class="product-title">Select Product</label>
+
+        <div class="slider">
+
+          <button type="button" class="arrow left" onclick="prevSlide()">❮</button>
+
+          <div class="product-card">
+
+            <img id="product-image" src="images/product1.jpg">
+
+            <h2 id="product-name">Premium Tea Powder</h2>
+
+          </div>
+
+          <button type="button" class="arrow right" onclick="nextSlide()">❯</button>
+
+        </div>
+
+      </div>
+
+      <!-- Hidden Product Field -->
+      <input type="hidden" name="product" id="selected-product" value="Premium Tea Powder">
+
+      <!-- Quantity -->
+      <div class="input-group">
+        <label>Quantity (Packets)</label>
+        <input type="number" name="quantity" min="1" required>
+      </div>
+
+      <!-- Order Button -->
+      <button type="submit" class="order-btn">
+        Order Now
+      </button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
