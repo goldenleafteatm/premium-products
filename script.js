@@ -68,12 +68,25 @@ setInterval(() => {
 
     showcaseCurrent++;
 
-    if(showcaseCurrent >= showcaseCount){
-
-        showcaseCurrent = 0;
-    }
+    showcaseSlider.style.transition =
+    "transform 1s ease";
 
     showcaseSlider.style.transform =
     `translateX(-${showcaseCurrent * 100}%)`;
+
+    if(showcaseCurrent === showcaseCount - 1){
+
+        setTimeout(() => {
+
+            showcaseSlider.style.transition =
+            "none";
+
+            showcaseCurrent = 0;
+
+            showcaseSlider.style.transform =
+            "translateX(0)";
+
+        },1000);
+    }
 
 },5000);
