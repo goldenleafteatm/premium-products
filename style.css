@@ -218,4 +218,55 @@ h1{
 
 }
 
+.showcase-container{
 
+    width:100%;
+
+    overflow:hidden;
+
+    height:100px;
+
+    margin-bottom:25px;
+}
+
+.showcase-slider{
+
+    display:flex;
+
+    transition:transform 1s ease-in-out;
+}
+
+.showcase-item{
+
+    min-width:100%;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.showcase-item h1{
+
+    color:#facc15;
+
+    font-family:'Cinzel', serif;
+
+    font-size:42px;
+
+    margin:0;
+}
+
+.showcase-item p{
+
+    color:#d1d5db;
+
+    font-style:italic;
+
+    margin-top:8px;
+}
