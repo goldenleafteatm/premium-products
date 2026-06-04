@@ -55,3 +55,25 @@ function prevSlide(){
 
     updateProduct();
 }
+
+const showcaseSlider =
+document.getElementById("showcase-slider");
+
+const showcaseCount =
+document.querySelectorAll(".showcase-item").length;
+
+let showcaseCurrent = 0;
+
+setInterval(() => {
+
+    showcaseCurrent++;
+
+    if(showcaseCurrent >= showcaseCount){
+
+        showcaseCurrent = 0;
+    }
+
+    showcaseSlider.style.transform =
+    `translateX(-${showcaseCurrent * 100}%)`;
+
+},5000);
